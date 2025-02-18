@@ -152,7 +152,7 @@ def export_csv(request):
     grade_query = request.GET.get('grade', '')
 
     # Filter records based on the provided parameters
-    records = Record.objects.all()
+    records = Record.objects.all() 
     if state_query:
         records = records.filter(state__icontains=state_query)
     if city_query:
